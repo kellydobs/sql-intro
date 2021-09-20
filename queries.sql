@@ -41,3 +41,22 @@ UPDATE "Employees" SET "Salary" = 500 WHERE "JobPosition" = 'Cook';
   
   
 
+
+
+
+--CREATE TABLE "Departments" (
+--  "ID"					SERIAL Primary Key,
+--  "DepartmentName" 		TEXT NOT NULL,
+--  "BuildingNumber" 		NUMERIC
+ -- );
+  
+  
+--INSERT INTO "Departments" ("DepartmentName", "BuildingNumber") VALUES ('Human Resources', 3);
+--INSERT INTO "Departments" ("DepartmentName", "BuildingNumber") VALUES ('Department of Mysteries', 5);
+--INSERT INTO "Departments" ("DepartmentName", "BuildingNumber") VALUES ('Gamma Radiation Lab', 12);
+
+--ALTER TABLE "Employees" ADD COLUMN "DeparmentId" INTEGER NULL REFERENCES "Departments" ("ID");
+
+UPDATE "Employees" SET "DeparmentId" = 3 WHERE "ID" IN (1);
+UPDATE "Employees" SET "DeparmentId" = 2 WHERE "ID" IN (2, 3);
+UPDATE "Employees" SET "DeparmentId" = 1 WHERE "ID" IN (4, 5, 6);
